@@ -1,0 +1,19 @@
+enum RoomStatus {
+  OPEN
+  CHECKED_IN
+  TECH_IN
+  DOC_IN
+}
+
+type Room @model @auth(rules: [{allow: public}]) @key(name: "byOffice", fields: ["officeID"]) {
+  id: ID!
+  name: String
+  status: RoomStatus
+  officeID: ID
+}
+
+type Office @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  code: Int
+  Rooms: [Room] @connection(keyName: "byOffice", fields: ["id"])
+}
