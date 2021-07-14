@@ -83,7 +83,7 @@ export default function Home() {
 
             </Grid>
             <Grid item>
-              <img src="./the-doctors-office-logo.png" alt={'office logo'} style={{height: "3em"}}/>
+              {/*<Image src="/the-doctors-office-logo.png" alt={'office logo'} height={"3em"} width={"10em"}/>*/}
             </Grid>
             <Grid item>
               <Typography gutterBottom variant="h5" component="h2">
